@@ -1,12 +1,13 @@
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Body from './Body';
+import Header from './Component/Header';
+import Footer from './Component/Footer';
+import Body from './Component/Body';
+import Directory from './Component/DirectoryComponent';
+import React, { Component } from 'react';
 import './App.css';
 
 
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {  }
@@ -15,6 +16,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+        <Directory />
         <Body />
         <Footer />
       </div>

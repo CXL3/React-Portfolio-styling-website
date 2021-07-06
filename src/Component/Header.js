@@ -27,15 +27,24 @@ class Header extends React.Component {
                                 <h1>Styling</h1>
                                 <h2>Helping you look slimmer and taller</h2>
                             </div>
+                            <div>
+                                <Navbar dark color="primary">
+                                    <div className="container">
+                                        <NavbarBrand href="/">NuCamp</NavbarBrand>
+                                    </div>
+                                </Navbar>
+                            </div>      
                         </div>
                     </div>
                 </Jumbotron>
-
-                <Navbar dark sticky="top">
-                    <div className="container">
-                        <NavbarBrand href="/">NuCamp</NavbarBrand>
-                    </div>
-                </Navbar>
+                
+                <div className="App">
+                    <Navbar dark color="dark">
+                        <div className="container">
+                            <NavbarBrand href="/">Extract my true beauty</NavbarBrand>
+                        </div>
+                    </Navbar>
+                </div>
             </React.Fragment>
         );
     }

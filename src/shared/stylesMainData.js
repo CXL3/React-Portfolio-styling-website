@@ -20,25 +20,25 @@ export const STYLES = [
         elevation: 2901,
         description: "Let NuCamp be your guide to this off-the-beaten-path, hike-in-only campground."
     },
-    
     {
         id: 3,
-        name: 'Nude color pointy shoes',
-        image: 'assets/images/nude-colorpointy-shoes.jpg',
+        name: 'shapewear',
+        image: 'assets/images/shapewear-main.png',
         elevation: 42,
         description: "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
-    },
+    },    
     {
         id: 4,
-        name: 'shapewear',
-        image: 'assets/images/shapewear-main.jpg',
-        elevation: 42,
-        description: "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
-    },     
-    {
-        id: 5,
         name: 'Blazer or cardigan',
         image: 'assets/images/blazer-main.png',
+        elevation: 42,
+        description: "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
+    }, 
+    
+    {
+        id: 5,
+        name: 'Nude color pointy shoes',
+        image: 'assets/images/nude-colorpointy-shoes.jpg',
         elevation: 42,
         description: "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
     }

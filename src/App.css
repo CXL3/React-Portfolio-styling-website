@@ -1,5 +1,6 @@
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: rgb(16, 15, 15);
 }
 
 h1, h2, h3, .card-body>.card-title {
@@ -17,6 +18,7 @@ h2 {
 
 .card-img-overlay .card-title {
   color: white;
+  font-family: "Lobster", cursive;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -27,14 +29,14 @@ h2 {
 }
 
 .site-footer {
-  background-image: linear-gradient(#CEC8FF, white);
+  background-color: rgb(16, 15, 15);
   padding: 20px 0;
 }
 
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
+  background-color: rgb(16, 15, 15);
   color: white;
 }
 
@@ -43,5 +45,5 @@ h2 {
 }
 
 .navbar-dark {
-  background-color: #901CAD;
+  background-color: rgb(16, 15, 15);
 }

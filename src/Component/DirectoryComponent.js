@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import StyleDetailInfo from './StyleDetailInfo';
+import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
 
 class Directory extends Component {
@@ -13,20 +14,7 @@ class Directory extends Component {
     onStylesSelect(style) {
         this.setState({selectedStyle: style});
     }
-    renderSelectedStyle(style) {
-        if (style) {
-            return (
-                <Card>
-                    <CardImg top src={style.image} alt={style.name} />
-                    <CardBody>
-                        <CardTitle>{style.name}</CardTitle>
-                        <CardText>{style.description}</CardText>
-                    </CardBody>
-                </Card>
-            );
-        }
-        return <div />;
-    }
+    
 
     render() {
         const directory = this.props.styles.map(style => {
@@ -47,11 +35,7 @@ class Directory extends Component {
                 <div className="row">
                     {directory}
                 </div>
-                <div className="row">
-                    <div className="col-md-5 m-1">
-                        {this.renderSelectedStyle(this.state.selectedStyle)}
-                    </div>
-                </div>    
+                <StyleDetailInfo style={this.state.selectedStyle} />
             </div>
         );
     }

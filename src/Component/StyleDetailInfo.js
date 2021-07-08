@@ -1,46 +1,65 @@
 import React from 'react';
-import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardTitle,CardBody,CardText } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
 
 function RenderStyleListing({style}){
     return (
-        <div className="col-md-5 m-1">
-            <Card>
-                {/* <CardImg top src={style.image} /> */}
-                <CardBody>
-                    <CardTitle>{style.name}</CardTitle>
-                    <CardText>{style.description}</CardText>
-                </CardBody>
-            </Card>
+        <div className="col m-1">
+            <h3>{style.description}</h3>
         </div>
     )
 }
 
-// function RenderComments({comments}) {
-//     if (comments) {
-//         return (
-//             <div className="col-md-5 m-1">
-//                 <h4>Comments</h4>
-//                 {comments.map(comment =>{
-//                     return(
-//                     <div key={comment.id}>
-//                         <p>{comment.text}</p>
-//                         <p>{comment.author} {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
-//                     </div>)
-//                     }) 
-//                 }       
-//             </div>
-//         );
-//     }
-//     return <div />;   
-// }    
+function RenderProducts({product}) {
+    if (product) {
+        return (
+            
+                <Card >
+                    <a href={product.url}>
+                    <CardImg src={product.image} alt={product.name}/>
+                    <CardTitle className="text-dark">{product.name}</CardTitle>
+                    <CardBody>
+                        <CardText className="text-dark">{product.text}</CardText>
+                    </CardBody>
+                    </a>
+                </Card>   
+          
+        );
+    }
+    
+}
+
 
 function StyleDetailInfo(props) {
+    const listing = props.products.map(product => {
+        return (
+            <div key={product.id} className="col-4 d-flex align-items-stretch mx-auto mt-3">
+                <RenderProducts product={product} />
+            </div>
+        );
+    });
+
     if (props.style) {
         return (
             <div className="container">
+                <div className="row">
+                    <div className="col ">
+                        <Breadcrumb>
+                            <BreadcrumbItem><Link to="/directory">Directory</Link></BreadcrumbItem>
+                            <BreadcrumbItem active>{props.style.name}</BreadcrumbItem>
+                        </Breadcrumb>
+                        <h2>{props.style.name}</h2>
+                        <hr />
+                    </div>
+                </div>
+
                 <div className='row'>
                     <RenderStyleListing style={props.style}/>
-                    {/* <RenderComments comments={props.comments}/> */}
+                </div>
+                <div className='row'>
+                    {listing}
                 </div>
             </div>      
         );

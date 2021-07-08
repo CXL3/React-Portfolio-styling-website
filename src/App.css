@@ -5,7 +5,7 @@ body {
 
 }
 
-h1, h2, h3, h4, .card-body>.card-title {
+h1, h2, h3, h4, .card-body, .card-title, .card-text{
   font-family: "Lobster", cursive;
 }
 
@@ -19,6 +19,9 @@ h1 {
 }
 h2 {
   color: #f76526;
+}
+h3 {
+  color: #6f6c6b;
 }
 
 .card-img-overlay .card-title {
@@ -53,11 +56,18 @@ h2 {
   background-color: rgb(16, 15, 15, 0);
 }
 
-
+.breadcrumb{
+  background-color: rgb(16, 15, 15);
+  color: white;
+}
   
 .centered {
-  height: 10vh;
+  height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card {
+  border: 0;
+  font-family: "Lobster", cursive;
 }

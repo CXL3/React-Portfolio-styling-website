@@ -2,6 +2,7 @@
 import Directory from './DirectoryComponent';
 import React, { Component } from 'react';
 import { STYLES } from '../shared/stylesMainData';
+import { PRODUCTS } from '../shared/product';
 import Header from './Header';
 
 import Contact from './ContactComponent';
@@ -19,6 +20,7 @@ class Main extends Component {
     this.state = { 
       styles: STYLES,
       selectedStyle: null,
+      products: PRODUCTS
       
     };
   }
@@ -38,6 +40,7 @@ class Main extends Component {
       return (
         <StyleDetailInfo
           style={this.state.styles.filter(style => style.id === +match.params.styleId)[0]}
+          products={this.state.products.filter(product => product.styleId === +match.params.styleId)}
           
         />
       );
@@ -51,7 +54,6 @@ class Main extends Component {
         <Directory styles={this.state.styles } onClick={styleId => this.onStylesSelect(styleId)}/>
         <StyleDetailInfo style={this.state.styles.filter(style=> style.id === this.state.selectedStyle)[0]} /> */}
         <Switch>
-          {/* <Route path='/home' component={HomePage} /> */}
           <Route exact path='/home' render={() => <Home />} />
           <Route exact path='/directory' render={() => <Directory styles={this.state.styles} />} />
           <Route path='/directory/:styleId' component={StyleWithId} />

@@ -21,7 +21,7 @@ function RenderDirectoryItem({style}) {
 function Directory(props) {
     const directory = props.styles.map(style => {
         return (
-            <div key={style.id} className="col-md-4 mt-5">
+            <div key={style.id} className="col-md-4 mt-3 ">
                 <RenderDirectoryItem style={style} />
             </div>
         );

@@ -3,7 +3,7 @@ export const STYLES = [
         id: 0,
         name: 'A line dress',
         image: 'assets/images/a-line-dress-main.png',
-        description: "Let NuCamp be your guide to this off-the-beaten-path, hike-in-only campground."
+        description: "It shows the smallest part of your waist.(cilck to buy)"
     },
    
     {

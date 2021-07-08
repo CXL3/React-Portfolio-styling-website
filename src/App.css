@@ -1,19 +1,24 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: rgb(16, 15, 15);
+  /* background-image: "img/1.jpg"; */
+
 }
 
-h1, h2, h3, .card-body>.card-title {
+h1, h2, h3, h4, .card-body>.card-title {
   font-family: "Lobster", cursive;
 }
 
 .card-title {
-  font-weight: 500;
+  font-weight: 1000;
   font-size: 1.8rem;
 }
 
+h1 {
+  color: #f0f4f5;
+}
 h2 {
-  color: #3046C5;
+  color: #f76526;
 }
 
 .card-img-overlay .card-title {
@@ -28,22 +33,31 @@ h2 {
   min-height: 200px;
 }
 
-.site-footer {
+/* .site-footer {
   background-color: rgb(16, 15, 15);
   padding: 20px 0;
-}
+} */
 
-.jumbotron {
+/* .jumbotron {
   margin: 0;
   padding: 30px;
   background-color: rgb(16, 15, 15);
   color: white;
-}
+} */
 
-.jumbotron h2 {
-  color: #CEC8FF;
-}
+/* .jumbotron h2 {
+  color: #fa6c30;
+} */
 
 .navbar-dark {
-  background-color: rgb(16, 15, 15);
+  background-color: rgb(16, 15, 15, 0);
+}
+
+
+  
+.centered {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

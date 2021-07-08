@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 
@@ -22,18 +22,22 @@ class Header extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Jumbotron fluid>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col">
-                                <h1>SlimStyle</h1>
-                                <h2>Helping you look slimmer and taller</h2>
+                {/* <Jumbotron fluid>
+                    <div>
+                        <div className="container bg-img">
+                            <div className="row">
+                                <div className="col">
+                                    <h1>SlimStyle</h1>
+                                    <h2>Helping you look slimmer and taller</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </Jumbotron>
+                    
+                </Jumbotron> */}
 
                 <Navbar dark sticky="top" expand="md">
+    
                     <div className="container">
                         <NavbarBrand className="mr-auto" href="/"></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />

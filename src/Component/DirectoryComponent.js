@@ -8,7 +8,7 @@ function RenderDirectoryItem({style}) {
         <Card >
             <Link to={`/directory/${style.id}`}>
                 <CardImg width="100%" src={style.image} alt={style.name}/>
-                <CardImgOverlay>
+                <CardImgOverlay className="d-flex align-items-end"> 
                     <CardTitle>{style.name}</CardTitle>
                 </CardImgOverlay>
             </Link>
@@ -21,7 +21,7 @@ function RenderDirectoryItem({style}) {
 function Directory(props) {
     const directory = props.styles.map(style => {
         return (
-            <div key={style.id} className="col-xs-5 m-5">
+            <div key={style.id} className="col-md-4 mt-5">
                 <RenderDirectoryItem style={style} />
             </div>
         );
@@ -31,6 +31,10 @@ function Directory(props) {
     return (
         <div className="container">
             <div className="row">
+                <h1 className="centered">Items that make you slimmer</h1>
+            </div>
+            <div className="row">
+                
                 {directory}
             </div>
         </div>

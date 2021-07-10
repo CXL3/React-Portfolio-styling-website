@@ -1,6 +1,6 @@
 React.js Portfolio
 
-This is a website showing Styling tips. Each tip shows clothe recommendations which links to Amazon site. I'm still working on contact form and a few other things.
+This is a website showing Styling tips. Each tip shows clothe recommendations which links to Amazon sites. I'm still working on contact form and a few other things.
 HomePage:
 ![homepage](https://user-images.githubusercontent.com/24197486/125153817-32512280-e10b-11eb-8fcf-011c54ca2d0b.png)
 

@@ -1,4 +1,5 @@
 React.js Portfolio
+https://slimstyling.herokuapp.com/home
 
 This is a website showing Styling tips. Each tip shows clothe recommendations which links to Amazon sites.
 HomePage:
